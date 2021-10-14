@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1bY-En-0FA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--kakaopage-->
+        <scene sceneID="4rx-UP-5Y7">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" id="Xdu-fq-yTc" customClass="HomeViewController" customModule="Clone_KakaoPage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gz2-Tl-raF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6US-Le-juX">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OriginalTableViewCell" rowHeight="166" id="ekG-Xa-5tD" customClass="OriginalTableViewCell" customModule="Clone_KakaoPage" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="166"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ekG-Xa-5tD" id="8N3-D7-R0s">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="166"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nHF-vw-iBH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="166"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2kN-oJ-tag">
+                                                        <size key="itemSize" width="128" height="128"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells/>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nHF-vw-iBH" firstAttribute="leading" secondItem="8N3-D7-R0s" secondAttribute="leading" id="QI4-I8-K9f"/>
+                                                <constraint firstAttribute="trailing" secondItem="nHF-vw-iBH" secondAttribute="trailing" id="bo9-8X-aBU"/>
+                                                <constraint firstAttribute="bottom" secondItem="nHF-vw-iBH" secondAttribute="bottom" id="cKH-9A-8bm"/>
+                                                <constraint firstItem="nHF-vw-iBH" firstAttribute="top" secondItem="8N3-D7-R0s" secondAttribute="top" id="lq9-4y-W5D"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="collectionView" destination="nHF-vw-iBH" id="Ll4-dh-dVN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="u6B-Cg-h1a"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6US-Le-juX" firstAttribute="leading" secondItem="Gz2-Tl-raF" secondAttribute="leading" id="3f7-3Q-bIP"/>
+                            <constraint firstItem="u6B-Cg-h1a" firstAttribute="trailing" secondItem="6US-Le-juX" secondAttribute="trailing" id="94B-GQ-A1j"/>
+                            <constraint firstItem="u6B-Cg-h1a" firstAttribute="bottom" secondItem="6US-Le-juX" secondAttribute="bottom" id="XU2-f0-QwW"/>
+                            <constraint firstItem="6US-Le-juX" firstAttribute="top" secondItem="u6B-Cg-h1a" secondAttribute="top" id="k7C-mT-I8L"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="kakaopage" id="4DS-IE-qMn"/>
+                    <connections>
+                        <outlet property="tableView" destination="6US-Le-juX" id="GHj-4o-fFh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mfc-Rq-fXU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-626.08695652173913" y="1684.8214285714284"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jT5-D4-fJM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1bY-En-0FA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" selectedImage="house.fill" id="yKS-Ml-G2g">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ica-ay-iSO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Xdu-fq-yTc" kind="relationship" relationship="rootViewController" id="FOq-n3-qVg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sKW-XC-3BT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1546" y="1685"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

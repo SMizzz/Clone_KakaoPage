@@ -1,0 +1,6 @@
+framework module Pods_Clone_KakaoPage {
+  umbrella header "Pods-Clone_KakaoPage-umbrella.h"
+
+  export *
+  module * { export * }
+}
